@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react';
 import { useParams } from 'react-router-dom';
+import Between from '../reference/between';
 import FlipWords from '../reference/flip-words';
 import TimeSpace from '../reference/time-space';
 import CanvasExperience from '../reference/canvas-experience';
@@ -15,7 +16,7 @@ export default function ShowcasePage() {
   const { feature } = useParams();
 
   if (feature === undefined) {
-    return <p>between — reference not built yet</p>;
+    return <Between />;
   }
 
   const Feature = FEATURES[feature];

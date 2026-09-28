@@ -1,0 +1,136 @@
+.viewport {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* One tall column of full-height sections; only this element moves. */
+.track {
+  will-change: transform;
+  transition: transform var(--dur-section) var(--ease);
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* --- intro --------------------------------------------------------------- */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 100%;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-latin);
+  font-size: var(--size-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.subtitle {
+  margin: 0;
+  font-family: var(--font-latin);
+  font-size: var(--size-body);
+  letter-spacing: 0.08em;
+}
+
+.arrow {
+  margin: 24px 0 0;
+  font-family: var(--font-latin);
+  font-size: var(--size-body);
+  color: var(--accent);
+  animation: nudge calc(var(--dur-move) * 1.6) var(--ease) infinite;
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+/* --- end ----------------------------------------------------------------- */
+
+.end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 100%;
+  font-family: var(--font-latin);
+  font-size: var(--size-body);
+  text-align: center;
+}
+
+.endLine {
+  margin: 0;
+}
+
+.endLink {
+  margin-top: 24px;
+}
+
+.endLink a {
+  color: var(--ink);
+}
+
+/* --- section dots -------------------------------------------------------- */
+
+.dots {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transform: translateY(-50%);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: transparent;
+  opacity: 0.35;
+  cursor: pointer;
+  transition:
+    opacity var(--dur-move) var(--ease),
+    background-color var(--dur-move) var(--ease);
+}
+
+.dot:hover {
+  opacity: 0.7;
+}
+
+.dotCurrent {
+  opacity: 1;
+  background: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track,
+  .dot {
+    transition-duration: 150ms;
+  }
+
+  .arrow {
+    animation: none;
+  }
+}
