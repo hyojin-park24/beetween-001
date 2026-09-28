@@ -1,0 +1,13 @@
+:root {
+  --bg: #F4F3EF;
+  --ink: #111111;
+  --accent: #FF3D00;
+  --font-latin: 'Inter', system-ui, sans-serif;
+  --font-korean: 'Pretendard', 'Inter', system-ui, sans-serif;
+  --size-display: clamp(48px, 12vw, 160px);
+  --size-body: 14px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-flip: 480ms;
+  --dur-move: 500ms;
+  --dur-section: 600ms;
+}

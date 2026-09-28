@@ -1,0 +1,42 @@
+.shell {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  font-family: var(--font-latin);
+  font-size: var(--size-body);
+  letter-spacing: 0.02em;
+}
+
+.link {
+  color: var(--ink);
+  text-decoration: none;
+  opacity: 0.45;
+  transition: opacity var(--dur-move) var(--ease);
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.current {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.sep {
+  opacity: 0.25;
+}
+
+.main {
+  padding-top: 48px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: opacity 150ms var(--ease);
+  }
+}
