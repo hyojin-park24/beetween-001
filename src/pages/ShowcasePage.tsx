@@ -1,10 +1,12 @@
 import type { ComponentType } from 'react';
 import { useParams } from 'react-router-dom';
 import FlipWords from '../reference/flip-words';
+import TimeSpace from '../reference/time-space';
 import type { FeatureProps } from '../shared/types';
 
 const FEATURES: Record<string, ComponentType<FeatureProps>> = {
   'flip-words': FlipWords,
+  'time-space': TimeSpace,
 };
 
 export default function ShowcasePage() {

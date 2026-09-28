@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "checkpoint": "node scripts/checkpoint.mjs"
+    "checkpoint": "node scripts/checkpoint.mjs",
+    "placeholders": "node scripts/make-placeholders.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

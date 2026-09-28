@@ -10,13 +10,14 @@
 /* Both words live in the same grid cell, so they stack without absolute positioning. */
 .deck {
   display: grid;
+  justify-items: var(--flip-align, center);
   width: 100%;
   perspective: 800px;
 }
 
 .word {
   grid-area: 1 / 1;
-  justify-self: center;
+  justify-self: var(--flip-align, center);
   margin: 0;
   font-family: var(--font-latin);
   font-size: var(--flip-size, var(--size-display));
