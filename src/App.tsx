@@ -34,8 +34,9 @@ function Nav() {
 
 export default function App() {
   const { pathname } = useLocation();
-  // /showcase renders a reference feature that needs the whole viewport.
-  const fullBleed = pathname.startsWith('/showcase');
+  // Both routes render a feature that owns the whole viewport, and they must
+  // share one layout so /lab and /showcase can be compared pixel for pixel.
+  const fullBleed = pathname.startsWith('/showcase') || pathname.startsWith('/lab');
 
   return (
     <div className={styles.shell}>

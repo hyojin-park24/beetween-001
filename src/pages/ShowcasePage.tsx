@@ -5,6 +5,7 @@ import FlipWords from '../reference/flip-words';
 import TimeSpace from '../reference/time-space';
 import CanvasExperience from '../reference/canvas-experience';
 import type { FeatureProps } from '../shared/types';
+import styles from './Notice.module.css';
 
 const FEATURES: Record<string, ComponentType<FeatureProps>> = {
   'flip-words': FlipWords,
@@ -21,7 +22,7 @@ export default function ShowcasePage() {
 
   const Feature = FEATURES[feature];
   if (!Feature) {
-    return <p>404 — no such feature.</p>;
+    return <p className={styles.notice}>404 — no such feature.</p>;
   }
 
   return <Feature active />;

@@ -26,9 +26,12 @@
   opacity: 1;
 }
 
+/* Page chrome never uses accent; the current location is ink with a 1px rule. */
 .current {
   opacity: 1;
-  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
 .sep {

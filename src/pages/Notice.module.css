@@ -1,0 +1,5 @@
+/* Plain text on a full-bleed route still has to clear the fixed nav. */
+.notice {
+  margin: 0;
+  padding: 72px 24px 24px;
+}
