@@ -2,7 +2,7 @@
 
 ## 이 구현에서 배울 것 5개
 1. 나가는 요소와 들어오는 요소를 **동시에 렌더**해야 flip이 성립한다 — 하나를 지우고 하나를 그리면 그냥 교체다.
-2. `perspective`는 **부모**에, `transform-origin`·`backface-visibility`는 **자식**에 — 3D 변환의 책임이 나뉘는 지점이다.
+2. `perspective`는 **부모**에, `transform-orig·`backface-visibility`는 **자식**에 — 3D 변환의 책임이 나뉘는 지점이다.
 3. CSS Grid의 `grid-area: 1 / 1`로 두 요소를 같은 칸에 겹치면 `position: absolute` 없이 스택이 된다.
 4. 애니메이션 중 입력을 막는 **잠금 상태(isAnimating)** 는 `outgoing !== null` 하나에서 파생시킨다 — boolean을 따로 두면 두 값이 어긋난다.
 5. prop이 바뀔 때 state를 맞추는 일은 `useEffect`가 아니라 **렌더 중 조건부 setState**로 한다 (React 공식 "adjusting state while rendering").
