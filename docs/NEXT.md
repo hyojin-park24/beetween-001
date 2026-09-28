@@ -10,4 +10,4 @@
 - [ ] (RED) Step 01 Project Setup
 
 ---
-_Last touched: (날짜) · Energy: — · 한 것: 저장소 생성_
+_Last touched: 2026-09-28 · Energy: — · 한 것: Session 1 (저장소·정답지·튜토리얼) 완료_

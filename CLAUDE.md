@@ -89,6 +89,8 @@ Decisions made during Session 1 that differ from the original spec. Each was del
 | 2 | Sub-durations derived with `calc()` from the three tokens | Keeps tokens as the single source |
 | 2 | `FlipWords` has a controlled mode (`words`, `index` props) and `--flip-size` / `--flip-align` custom properties | Reused as the year label in `time-space` |
 | 2 | `time-space` overlays (year, place, axis) have `z-index: 1` | Neighbor cards otherwise cover the axis line |
+| 3 | gray-matter removed; `loadSteps.ts` parses frontmatter itself (~20 lines) | gray-matter needs `Buffer`, which throws in the browser; a Node polyfill costs more than the parser |
+| 3 | `import.meta.glob` uses `{ query: '?raw', import: 'default' }` | `{ as: 'raw' }` is deprecated in current Vite; this is the documented equivalent |
 
 ## Commit and tag conventions
 

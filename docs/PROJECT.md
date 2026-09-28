@@ -1,6 +1,6 @@
 # Week 01 — Flip Words
 Status: READY
-Dates: (채우기)
+Dates: 2026-09-28 (Mon) ~ 2026-10-04 (Sun)
 
 ## Objective
 클릭·휠·키보드로 단어가 3D flip으로 바뀌는 타이포 인터랙션을 구현한다.
