@@ -11,3 +11,11 @@ export type FeatureSlug = (typeof FEATURE_SLUGS)[number];
 export function isFeatureSlug(value: string | undefined): value is FeatureSlug {
   return FEATURE_SLUGS.some((slug) => slug === value);
 }
+
+/**
+ * Reference features must also run on their own at /showcase/<feature>, where
+ * nothing passes `active`. Same contract as FeatureProps, `active` optional.
+ */
+export type StandaloneFeatureProps = Omit<FeatureProps, 'active'> & {
+  active?: boolean;
+};

@@ -1,9 +1,13 @@
 .shell {
   min-height: 100vh;
-  padding: 24px;
 }
 
+/* Fixed so a feature can own the whole viewport underneath it. */
 .nav {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 10;
   display: flex;
   gap: 8px;
   font-family: var(--font-latin);
@@ -31,8 +35,14 @@
   opacity: 0.25;
 }
 
-.main {
-  padding-top: 48px;
+/* Text pages sit below the fixed nav; features start at the top edge. */
+.padded {
+  padding: 72px 24px 24px;
+}
+
+.full {
+  position: relative;
+  height: 100vh;
 }
 
 @media (prefers-reduced-motion: reduce) {

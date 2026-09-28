@@ -33,10 +33,14 @@ function Nav() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
+  // /showcase renders a reference feature that needs the whole viewport.
+  const fullBleed = pathname.startsWith('/showcase');
+
   return (
     <div className={styles.shell}>
       <Nav />
-      <main className={styles.main}>
+      <main className={fullBleed ? styles.full : styles.padded}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tutorial/:weekSeg/:stepSeg" element={<TutorialPage />} />

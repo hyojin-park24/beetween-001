@@ -1,12 +1,23 @@
+import type { ComponentType } from 'react';
 import { useParams } from 'react-router-dom';
-import { isFeatureSlug } from '../shared/types';
+import FlipWords from '../reference/flip-words';
+import type { FeatureProps } from '../shared/types';
+
+const FEATURES: Record<string, ComponentType<FeatureProps>> = {
+  'flip-words': FlipWords,
+};
 
 export default function ShowcasePage() {
   const { feature } = useParams();
 
-  if (feature !== undefined && !isFeatureSlug(feature)) {
+  if (feature === undefined) {
+    return <p>between — reference not built yet</p>;
+  }
+
+  const Feature = FEATURES[feature];
+  if (!Feature) {
     return <p>404 — no such feature.</p>;
   }
 
-  return <p>{feature ?? 'between'} — reference not built yet (Stage 2)</p>;
+  return <Feature active />;
 }
