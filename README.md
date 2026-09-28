@@ -25,7 +25,9 @@ npm run checkpoint week1-step1 # 태그 + progress.json + NEXT.md 갱신 후 커
 2. Start를 눌러 Step으로 간다. Goal·Concept·Mission만 읽고 먼저 직접 해 본다.
 3. 막히면 Hint 1 → Hint 2 순서로 연다. Solution은 Hint 2를 열어야 나타난다.
 4. Checkpoint 항목을 브라우저에서 하나씩 눈으로 확인하고 체크한다.
-5. 통과하면 Commit 섹션의 커밋 메시지로 커밋하고 `npm run checkpoint <tag>`를 돌린다. `docs/NEXT.md`가 다음 Step을 가리키게 갱신된다.
+5. 통과하면 Commit 섹션의 커밋 메시지로 커밋하고 `npm run checkpoint <tag>`를 돌린다. 태그가 붙고 `content/tutorial/progress.json`과 `docs/NEXT.md`가 다음 Step을 가리키게 갱신된 뒤 `chore: checkpoint <tag>`로 커밋된다.
+
+`npm run checkpoint`은 **작업 트리가 깨끗할 때만** 돈다. 커밋하지 않은 변경이 남아 있거나 같은 이름의 태그가 이미 있으면 아무것도 하지 않고 종료 코드 1로 멈춘다. 태그는 이 명령으로만 만든다 — 손으로 `git tag` 하지 않는다.
 
 에너지가 RED인 날은 Step을 건너뛰지 말고 카드의 `RED day:` 한 줄만 한다. 그것도 진도다.
 
