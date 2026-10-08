@@ -1,0 +1,1 @@
+export  const words = ['DEVELOPER', 'CREATOR', 'EXPLORER', 'ARTIST?']

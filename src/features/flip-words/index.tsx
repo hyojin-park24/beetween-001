@@ -1,3 +1,10 @@
+import { words } from './data.ts';
+import styles from './FlipWords.module.css';
+
 export default function FlipWords() {
-    return <div>FLIP WORDS</div>
+    return(
+        <div className={styles.stage}>
+            <span className={styles.word}>{words[0]}</span>
+        </div>
+    )
 }
