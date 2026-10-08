@@ -1,7 +1,7 @@
 # NEXT
 
 ## ▶ NEXT START
-**/tutorial/week-01/step-01 을 연다.**
+**/tutorial/week-01/step-02 — First Word 부터 시작한다.**
 
 ## CURRENT ISSUE
 (없음)
