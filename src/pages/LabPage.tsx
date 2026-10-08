@@ -6,7 +6,7 @@ import styles from './Notice.module.css';
 type FeatureModule = { default: ComponentType<FeatureProps> };
 
 // Empty until the user writes src/features/<slug>/index.tsx — the build must not care.
-const modules = import.meta.glob('../features/*/index.tsx') as Record<
+const modules = import.meta.glob('../features/flip-words/index.tsx') as Record<
   string,
   () => Promise<FeatureModule>
 >;

@@ -10,4 +10,9 @@
 ## 자주 나는 버그와 해결 3개
 1. **트랙패드 한 번에 여러 칸 넘어감** — 누적 deltaY만 보면 관성 이벤트마다 임계값을 다시 넘는다. 한 번 이동한 뒤 휠 이벤트가 `quietMs` 동안 끊길 때까지 잠그면 flick 하나에 한 칸이 된다 (`useWheelStep`).
 2. **연타하면 글자가 겹치거나 사라짐** — 애니메이션이 끝나기 전에 다음 flip이 시작되면 요소가 3개 이상 쌓인다. `isAnimating` 동안 모든 입력을 무시하고, `key`에 `flipId`를 넣어 매번 새 요소로 교체한다.
-3. **애니메이션이 안 끝나고 멈춤** — 탭이 백그라운드로 가면 `animationend`가 오지 않는다. 600ms `setTimeout` 안전장치로 잠금을 풀고, 언마운트 시 `clearTimeout`한다.
+3. **애니메이션이 안 끝나고 멈춤** — 탭이 백그라운드로 가면 `animationend`가 오지 않는다. 600ms `s
+
+
+## RED day:
+* state = useWheelStep
+* CSS = FilpWords.module.css
