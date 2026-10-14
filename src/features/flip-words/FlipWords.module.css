@@ -5,12 +5,25 @@
     height: 100%;
 }
 
-.word {
-    margin: 0;
+.word {    margin: 0;
     font-family: var(--font-latin);
     font-size: var(--size-display);
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1;
     white-space: nowrap;
+}
+
+.counter {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    margin: 0;
+    font-family: var(--font-latin);
+    font-size: var(--size-body);
+    letter-spacing: 0.06em;
+}
+
+.currentIndex{
+    color: var(--accent);
 }
