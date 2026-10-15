@@ -13,11 +13,12 @@ export default function FlipWords() {
     // 방향 하나로 앞뒤를 다 처리, 길이를 더해서 음수를 피해감
     function step(direction: 1 | -1){
         setIndex((current)=>(current + direction + words.length) % words.length);
+        console.log('index', index, 'words.length', words.length, 'current', (index + direction + words.length) % words.length)
     }
 
     return(
         <div className={styles.stage} onClick={()=>step(1)}>
-            <span className={styles.word}>{words[0]}</span>
+            <span className={styles.word}>{words[index]}</span>
             <p className={styles.counter}>
                 <span className={styles.currentIndex}>
                     {pad(index + 1)}

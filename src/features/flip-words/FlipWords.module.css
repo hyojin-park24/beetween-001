@@ -12,6 +12,7 @@
     letter-spacing: -0.03em;
     line-height: 1;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .counter {
